@@ -5,6 +5,7 @@ use warnings;
 
 use Moose::Util::TypeConstraints;
 use Scalar::Util qw( looks_like_number );
+#Abstract Old behaviour of the Num type
 
 my $value_type = Moose::Util::TypeConstraints::find_type_constraint('Value');
 subtype 'LaxNum'
@@ -42,7 +43,9 @@ MooseX::Types::LaxNum
 
 =head1 DESCRIPTION
 
-C<LaxNum> accepts everything for which L<Scalar::Util/looks_like_number> return true. It can be used to get the old behaviour of C<Moose::Util::TypeConstraints::Num>, since Num has been changed to be more strict.
+C<LaxNum> accepts everything for which L<Scalar::Util/looks_like_number> return true. 
+It can be used to get the old behaviour of C<Moose::Util::TypeConstraints::Num>, 
+since Num has been changed to be more strict.
 
 =head1 AUTHOR
 
