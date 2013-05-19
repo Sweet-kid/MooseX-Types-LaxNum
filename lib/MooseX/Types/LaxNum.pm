@@ -2,10 +2,9 @@ package MooseX::Types::LaxNum;
 
 use strict;
 use warnings;
-
 use Moose::Util::TypeConstraints;
 use Scalar::Util qw( looks_like_number );
-#Abstract Old behaviour of the Num type
+# ABSTRACT: Old behaviour of the Num type
 
 my $value_type = Moose::Util::TypeConstraints::find_type_constraint('Value');
 subtype 'LaxNum'
